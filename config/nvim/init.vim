@@ -16,6 +16,7 @@ Plug 'joshdick/onedark.vim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'arcticicestudio/nord-vim'
 
 
 call plug#end()
