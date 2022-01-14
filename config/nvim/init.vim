@@ -12,12 +12,14 @@ Plug 'junegunn/fzf.vim'
 Plug 'turbio/bracey.vim'
 Plug 'turbio/bracey.vim', {'do':'npm install --prefix server'}
 Plug 'mattn/emmet-vim'
-Plug 'joshdick/onedark.vim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'arcticicestudio/nord-vim'
 
+" Colorscheme
+Plug 'arcticicestudio/nord-vim' "Nord
+Plug 'dracula/vim', { 'name': 'dracula' } "Dracula
+Plug 'joshdick/onedark.vim' "Onedark
 
 call plug#end()
 
@@ -26,6 +28,7 @@ call plug#end()
 " ===== Essensial Settings =====
 syntax enable
 set number
+set relativenumber
 set title
 set mouse=a
 set encoding=UTF-8
@@ -34,7 +37,7 @@ set hidden
 set termguicolors
 
 
-colorscheme onedark
+colorscheme dracula
 
 " ===== Keymaping =====
 :imap jj <Esc>
@@ -62,7 +65,7 @@ lua <<END
 require'lualine'.setup {
   options = {
     icons_enabled = true,
-    theme = 'palenight',
+    theme = 'dracula',
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
     disabled_filetypes = {},
