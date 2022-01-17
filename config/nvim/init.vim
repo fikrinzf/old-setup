@@ -15,6 +15,7 @@ Plug 'mattn/emmet-vim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'ryanoasis/vim-devicons'
 
 " Colorscheme
 Plug 'arcticicestudio/nord-vim' "Nord
@@ -31,11 +32,11 @@ set number
 set relativenumber
 set title
 set mouse=a
-set encoding=UTF-8
+set encoding=utf8
 set nocompatible
 set hidden
 set termguicolors
-
+set guifont=DroidSansMono\ Nerd\ Font\ 11 
 
 colorscheme dracula
 
