@@ -41,7 +41,13 @@ set guifont=DroidSansMono\ Nerd\ Font\ 11
 colorscheme dracula
 
 " ===== Keymaping =====
+" Vim
 :imap jj <Esc>
+nmap <C-j> <C-W>j
+nmap <C-k> <C-W>k
+nmap <C-h> <C-W>h
+nmap <C-l> <C-W>l
+
 " NERDTree
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
