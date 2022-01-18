@@ -16,6 +16,7 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'ryanoasis/vim-devicons'
+Plug 'tiagofumu/vim-nerdtree-syntax-highlight'
 
 " Colorscheme
 Plug 'arcticicestudio/nord-vim' "Nord
