@@ -48,6 +48,8 @@ nmap <C-j> <C-W>j
 nmap <C-k> <C-W>k
 nmap <C-h> <C-W>h
 nmap <C-l> <C-W>l
+nnoremap <C-Up> : vertical resize +2 <CR>
+nnoremap <C-Down> : vertical resize -2 <CR>
 
 " NERDTree
 nnoremap <leader>n :NERDTreeFocus<CR>
