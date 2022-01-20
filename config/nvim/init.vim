@@ -17,6 +17,7 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumu/vim-nerdtree-syntax-highlight'
+Plug 'iamcoo/markdown-preview.nvim', {'do': 'cd app && yarn install'}
 
 " Colorscheme
 Plug 'arcticicestudio/nord-vim' "Nord
