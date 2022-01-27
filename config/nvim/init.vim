@@ -20,9 +20,11 @@ Plug 'tiagofumu/vim-nerdtree-syntax-highlight'
 Plug 'iamcoo/markdown-preview.nvim', {'do': 'cd app && yarn install'}
 
 " Colorscheme
+Plug 'morhetz/gruvbox' " Gruvbox
 Plug 'arcticicestudio/nord-vim' "Nord
 Plug 'dracula/vim', { 'name': 'dracula' } "Dracula
 Plug 'joshdick/onedark.vim' "Onedark
+Pluf 'ayu-theme/ayu-vim' " Ayu 
 
 call plug#end()
 
@@ -41,6 +43,11 @@ set termguicolors
 set guifont=DroidSansMono\ Nerd\ Font\ 11 
 
 colorscheme dracula
+
+" Ayu colorscheme options
+" let ayucolor="dark" " This is default option
+" let ayucolor="mirage"
+" let ayucolor="light"
 
 " ===== Keymaping =====
 " Vim
