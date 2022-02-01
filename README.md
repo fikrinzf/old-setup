@@ -82,6 +82,10 @@ Debian & Ubuntu : `sudo apt install zsh`
 Clone this repository `git clone https://github.com/fikrinzf/dotfiles`\
 Copy all files to your `$HOME` directory 
 
+#### Notes : 
+You should install `node.js` v.12 or higher and instal pynvim by run `pip3 --user pynvim`\
+If bracey have error, just go to `~/.config/nvim/plugged/bracey.vim` with terminal and run this command `npm install --prefix server`
+
 ### Configuration
 **Bspwm** :\
 You can customize bspwm in `~/.config/bspwm/bspwmrc`
