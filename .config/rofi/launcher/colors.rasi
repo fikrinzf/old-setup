@@ -1,19 +1,13 @@
 /* colors */
 
 * {
- bg:#2E3440;
- bg1:#3B4252;
- bg2:#434C5E;
- bg3:#4C566A;
+ bg:#1f2430;
+ bg2:#0d1017;
  fg:#ECEFF4;
  fg1:#E5E9F0;
  fg2:#D8DEE9;
-  red: #BF616A;
-  orange:#D08770;
-  yellow:#EBCB8B;
-  magenta:#B48EAD;
-  cyan:#88C0D0;
-  blue:#81A1C1;
+  orange:#fa8d3e;
   green:#A3BE8C;
   transparent: #00000000;
+	blue : #73d0ff;
 }
