@@ -111,7 +111,7 @@ label-empty-padding = 1
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = " 龍 "
+format-prefix = "龍 "
 format-prefix-foreground = ${colors.teal}
 label = %percentage:2%%
 
@@ -128,7 +128,7 @@ interface = wlan0
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
-label-connected = %essid%
+label-connected = "%{A1:$HOME/.config/rofi/networkmanager-polybar/network.sh &:}%essid%%{A}"
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
@@ -137,7 +137,7 @@ format-disconnected =
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
 ramp-signal-0 = 
-ramp-signal-1 = 
+ramp-signal-1 = 直
 ramp-signal-2 = 直
 ramp-signal-3 = 直
 ramp-signal-4 = 直
