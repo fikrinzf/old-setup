@@ -16,7 +16,7 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'ryanoasis/vim-devicons'
-Plug 'tiagofumu/vim-nerdtree-syntax-highlight'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'iamcoo/markdown-preview.nvim', {'do': 'cd app && yarn install'}
 
 " Colorscheme
@@ -24,7 +24,7 @@ Plug 'morhetz/gruvbox' " Gruvbox
 Plug 'arcticicestudio/nord-vim' "Nord
 Plug 'dracula/vim', { 'name': 'dracula' } "Dracula
 Plug 'joshdick/onedark.vim' "Onedark
-Pluf 'ayu-theme/ayu-vim' " Ayu 
+Plug 'ayu-theme/ayu-vim' " Ayu 
 
 call plug#end()
 
@@ -42,11 +42,11 @@ set hidden
 set termguicolors
 set guifont=DroidSansMono\ Nerd\ Font\ 11 
 
-colorscheme dracula
+colorscheme ayu
 
 " Ayu colorscheme options
 " let ayucolor="dark" " This is default option
-" let ayucolor="mirage"
+ let ayucolor="mirage"
 " let ayucolor="light"
 
 " ===== Keymaping =====
@@ -83,7 +83,7 @@ lua <<END
 require'lualine'.setup {
   options = {
     icons_enabled = true,
-    theme = 'dracula',
+    theme = 'ayu_mirage',
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
     disabled_filetypes = {},
