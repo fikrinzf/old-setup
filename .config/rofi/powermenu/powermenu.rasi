@@ -1,82 +1,88 @@
 configuration {
-    show-icons:                     false;
-    disable-history:                false;
-	  sidebar-mode: 					false;
+    font:                   "Iosevka Nerd Font 9";
+    disable-history:        false;
+    fullscreen:             false;
+    hide-scrollbar: 				true;
+    sidebar-mode: 					false;
 }
 
-@import "colors.rasi"
-
 * {
-    background-color:               @bg;
-    text-color:                     @fg2;
+    background-color:       #1f2430;
+    text-color:             #fa8d3e;
 }
 
 window {
-    transparency:                   true;
-    width:                          100px;
-    location:                       east;
-    x-offset:                       -10px;
-    y-offset:                       0px;
+    transparency:           "real";
+    location:               center;
+    border :                2px;
+    border-color :          #fa8d3e;
+    width:							    30%;
+    height:                 20%;
+    x-offset:               0;
+    y-offset:               0;
+}
+
+prompt {
+    enabled:     						true;
+    padding:                10px;
+	  background-color:    		#8a91992e;
+	  text-color: 			  		#fff;
+    border-radius:          14px;
+    font:                   "Iosevka 9";
+}
+
+textbox-prompt-colon {
+	  expand: 		    				false;
+	  str: 					      		" System ";
+	  background-color: 			#f07171;
+	  text-color: 			  		#fff;
+    padding:                10px 10px 0px 10px;
+    border-radius:          14px;
+}
+
+inputbar {
+	  children: 				  		[ textbox-prompt-colon, prompt ];
+    spacing:                15px;
+    expand:                 false;
+    padding:                0px;
+    position:               center;
 }
 
 listview {
-    lines:							5;
-    margin:                         8px;
-    spacing:                        8px;
-    cycle:                          true;
-    dynamic:                        true;
-    layout:                         vertical;
+    columns:					      5;
+    lines:							    1;
+    spacing:                12px;
+    cycle:                  true;
+    dynamic:                true;
+    layout:                 vertical;
 }
 
 mainbox {
-    background-color:               @bg;
-    children:                       [ listview ];
+    background-color:       #1f2430;
+    children:               [ inputbar, listview ];
+    spacing:                12px;
+    margin:                 12px;
 }
 
 element {
-    background-color:               @bg1;
-    text-color:                     @fg2;
-    orientation:                    vertical;
-    border-radius:                  12px;
+    background-color:       inherit;
+    text-color:             inherit;
+    orientation:            vertical;
+    border-radius:          12px;
+    margin:                 12px 0px 0px 0px;
 }
 
 element-text {
-    background-color: 				inherit;
-    text-color:       				inherit;
-	font:							"feather 20";
-    expand:                         true;
-    horizontal-align:               0.5;
-    vertical-align:                 0.5;
-    margin:                         26px 26px 26px 26px;
-}
-
-element normal.urgent,
-element alternate.urgent {
-    background-color:               @bg;
-    text-color:                     @cyan;
-    border-radius:                  12px;
-}
-
-element normal.active,
-element alternate.active {
-    background-color:               @fg2;
-    text-color:                     @cyan;
+    background-color:       inherit;
+    text-color:             inherit;
+	  font:							      "feather 15";
+    expand:                 true;
+    horizontal-align:       0.5;
+    vertical-align:         0;
+    margin:                 12px 10px 10px 10px;
 }
 
 element selected {
-    background-color:               @cyan;
-    text-color:                     @bg;
-    border:                  		0px;
-    border-radius:                  12px;
-    border-color:                  	@bg;
-}
-
-element selected.urgent {
-    background-color:               @cyan;
-    text-color:                     @fg;
-}
-
-element selected.active {
-    background-color:               @bg;
-    color:                          @fg;
+    background-color:       #171b24;
+    text-color:             #87d96c;
 }

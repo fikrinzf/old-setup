@@ -42,12 +42,12 @@ set hidden
 set termguicolors
 set guifont=DroidSansMono\ Nerd\ Font\ 11 
 
-colorscheme ayu
-
 " Ayu colorscheme options
 " let ayucolor="dark" " This is default option
  let ayucolor="mirage"
 " let ayucolor="light"
+
+colorscheme ayu
 
 " ===== Keymaping =====
 " Vim

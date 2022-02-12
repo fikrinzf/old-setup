@@ -61,9 +61,9 @@ font-0 = "Iosevka Nerd Font:style=regular:style=10:3"
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
-modules-left = bspwm xwindow
+modules-left = bspwm xwindow 
 
-modules-right = pulseaudio memory cpu temperature battery wlan date powermenu
+modules-right = power pulseaudio disk memory cpu temperature battery wlan date powermenu
 tray-position = right
 tray-padding = 2
 ;tray-background = #0063ff
@@ -124,11 +124,11 @@ label = %percentage_used%%
 
 [module/wlan]
 type = internal/network
-interface = wlan0
+interface = wlp3s0
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
-label-connected = "%{A1:$HOME/.config/rofi/networkmanager-polybar/network.sh &:}%essid%%{A}"
+label-connected = "%{A1:$HOME/.config/rofi/networkmanager/network.sh &:}%essid%%{A}"
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
@@ -136,25 +136,26 @@ format-disconnected =
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
-ramp-signal-0 = 
+ramp-signal-0 = 直
 ramp-signal-1 = 直
 ramp-signal-2 = 直
 ramp-signal-3 = 直
 ramp-signal-4 = 直
 ramp-signal-foreground = ${colors.blue}
 
+
 [module/date]
 type = internal/date
 interval = 5
 
 date =
-date-alt = " %Y-%m-%d"
+date-alt = " %Y-%m-%d"
 
-time = %H:%M
-time-alt = %H:%M:%S
+time = " %H:%M"
+time-alt = %H:%M:%
 
 format-prefix = 
-format-prefix-foreground = ${colors.foreground-alt}
+format-prefix-foreground = ${colors.green}
 
 label = %date% %time%
 
@@ -226,21 +227,34 @@ format-warn = <ramp> <label-warn>
 label = %temperature-c%
 label-warn = %temperature-c%
 
-ramp-0 = 
+ramp-0 = 
 ramp-1 = 
-ramp-2 = 
-ramp-foreground = ${colors.red}
+ramp-2 = 
+ramp-0-foreground = ${colors.green}
+ramp-1-foreground = ${colors.green}
+ramp-2-foreground = ${colors.red}
 
 [module/powermenu]
 type = custom/text 
-click-left = "$HOME/.config/rofi/powermenu-polybar/powermenu.sh"
-click-right = "$HOME/.config/rofi/powermenu-polybar/powermenu.sh"
+click-left = "$HOME/.config/rofi/powermenu/powermenu.sh"
+click-right = "$HOME/.config/rofi/powermenu/powermenu.sh"
 
 content = ⏻
 content-margin = 1
 content-background = ${colors.background}
 content-foreground = ${colors.red}
 
+[module/disk]
+type = internal/fs
+interval = 25
+
+mount-0 = /
+
+label-mounted = " %used% Used"
+label-mounted-foreground = ${colors.green}
+
+label-unmounted = %mountpoint% not mounted
+label-unmounted-foreground = ${colors.foreground}
 
 [settings]
 screenchange-reload = true

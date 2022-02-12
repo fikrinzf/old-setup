@@ -1,0 +1,20 @@
+/* Confirm Dialog */
+
+* {
+    background-color:    #1f2430;
+    text-color:          #fff;
+   	font:				 	       "Iosevka Nerd Font 9";
+}
+
+window {
+    width:      			  160px;
+    padding:    		    10px;
+    border:					    2px;
+    border-color:       #fa8d3e;
+    location:           center;
+}
+
+entry {
+    expand: 			      true;
+    text-color:				  #fff;
+}
