@@ -1,28 +1,46 @@
-#
-# wm independent hotkeys
-#
+# ===== wm independent hotkeys =====
 
+# ===== Program Launcher ===== 
 # terminal emulator
 super + Return
 	kitty
 
-# program launcher
+# App Launcher
+super + d 
+	sh ~/.config/rofi/launcher/launcher.sh
 
+# Powermenu
+super + x 
+	sh ~/.config/rofi/powermenu/powermenu.sh
+
+# Network Manager
+super <v></v>
+	sh ~/.config/rofi/networkmanager/network.sh
+
+# Min Browser
+ctrl + alt + b
+	min
+
+# Spotify
+ctrl + alt + s 
+	spotify
+
+# Thunar File Manager
+ctrl + alt + f
+	thunar
+
+# Pomotroid
+ctrl + alt + p 
+	pomotroid
+
+
+# ===== sxhkd =====
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
 
-#
-# bspwm hotkeys
-#
 
-
-super + d 
-	sh ~/.config/rofi/launcher/launcher.sh
-
-super + x 
-	sh ~/.config/rofi/powermenu/powermenu.sh
-
+# ===== Bspwm =====
 # quit/restart bspwm
 super + alt + {q,r}
 	bspc {quit,wm -r}
@@ -124,3 +142,4 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+

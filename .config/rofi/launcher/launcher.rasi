@@ -1,7 +1,7 @@
 configuration {
     font:                   "Iosevka Nerd Font 12";
     show-icons:             true;
-	  icon-theme: 					  "Papirus";
+	  icon-theme: 					  "WhiteSur";
     display-drun: 					" ";
     drun-display-format:    "{name}";
     disable-history:        false;
@@ -16,7 +16,7 @@ window {
     transparency:           "real";
     background-color:       @bg2;
     text-color:             @fg;
-    border:							    3px;
+    border:							    2px;
 	  border-color:					  @orange;
 	  width:							    500px;
     location:               center;

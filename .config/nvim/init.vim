@@ -1,23 +1,37 @@
 " ===== Plugins =====
 call plug#begin('~/.config/nvim/plugged')
 
+# Lua line
 Plug 'nvim-lualine/lualine.nvim'
+# Dev icon
 Plug 'kyazdani42/nvim-web-devicons'
+# Nerdtree
 Plug 'preservim/nerdtree'
+# Vim-polyglot
 Plug 'sheerun/vim-polyglot'
+# COC
 Plug 'neoclide/coc.nvim',{'branch':'release'}
+# Auto pairs
 Plug 'jiangmiao/auto-pairs'
+# Fuzzy finder
 Plug 'junegunn/fzf', {'do': {-> fzf#install()}}
 Plug 'junegunn/fzf.vim'
+# Bracey/Live server html
 Plug 'turbio/bracey.vim'
 Plug 'turbio/bracey.vim', {'do':'npm install --prefix server'}
+# Emmet
 Plug 'mattn/emmet-vim'
+# Lsp
 Plug 'neovim/nvim-lspconfig'
+# Snippets
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+# Icons
 Plug 'ryanoasis/vim-devicons'
+# Syntax highlight Nerdtree
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-Plug 'iamcoo/markdown-preview.nvim', {'do': 'cd app && yarn install'}
+# Markdown preview
+Plug 'iamcoo/markdown-preview.nvim'
 
 " Colorscheme
 Plug 'morhetz/gruvbox' " Gruvbox
