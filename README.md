@@ -1,6 +1,7 @@
 ### Description
-This is my **personal configuration** for bspwm window manager and neovim. 
+This is my **personal configuration** for bspwm window manager and neovim. This dotfiles was build and tested on Manjaro Linux. If you use other distro and find an error, discussion are open.  
 
+**Details setup**<br>
 Here are some details about my setup :
 * **Window Manager** : [Bspwm](https://github.com/baskerville/bspwm)
 * **Text Editor** : [Neovim](https://github.com/neovim/neovim)
@@ -10,97 +11,85 @@ Here are some details about my setup :
 * **Terminal** : [Kitty](https://github.com/kovidgoyal/kitty)
 * **Shell** : [Zsh](https://www.zsh.org/)
 
+Before using this dotfiles, make sure you have installed all stuff in my **details setup**. Afters install all stuf above you also should install another dpendencies bellow.
+<details>
+<summary><strong>Dependencies</strong></summary>
+
+* [Vim-Plug](https://github.com/junegunn/vim-plug)
+* [Nodejs v12 or higher](https://nodejs.org/en/)
+* [Pynvim](https://pynvim.readthedocs.io/en/latest/installation.html)
+* [Arandr](https://gitlab.com/arandr/arandr)
+* Nitrogen : `sudo pacman -S nitrogen`
+* lxappearance : `sudo pacman -S lxappearance`
+* bmon : `sudo pacman -S bmon`
+</details>
+
+
 ### Instalation
-Before using this dotfiles, you should install the dependencies below. If you have installed before just skip this setup.
-
-
-[commnet]: # (Window Manager)
-<details>
-<summary><strong>Bspwm & Sxhkd</strong></summary>
-
-Arch : `sudo pacman -S bspwm sxhkd`\
-Debian & Ubuntu : `sudo apt install bspwm sxhkd`
-</details>
-
-
-[commnet]: # (Neovim)
-<details>
-<summary><strong>Neovim</strong></summary>
-
-**Installation**\
-Arch : `sudo pacman -S neovim`\
-Debian & Ubuntu : `sudo apt install neovim`
-
-**Plugin Manager**\
-In this dotfiles i use [vim-plug](https://github.com/junegunn/vim-plug) to manage all plugin on neovim, you can use other plugin manager such `Pathogen` or `Vundle`
-</details>
-
-
-[commnet]: # (Terminal)
-<details>
-<summary><strong>Kitty</strong></summary>
-
-Arch : `sudo pacman -S kitty`\
-Debian & Ubuntu : `sudo apt install kitty`
-</details>
-
-
-[commnet]: # (Panel)
-<details>
-<summary><strong>Polybar</strong></summary>
-
-**Installation**\
-Arch : \
-Polybar not available on arh pacman, so you can install from aur.
+Clone this repository 
+``` sh
+git clone https://github.com/fikrinzf/dotfiles
 ```
-git clone https://aur.archlinux.org/polybar.git
-cd polybar
-makepkg -si
+
+* After cloning this repository, copy all files to `$HOME` directory. 
+* **Neovim** : Open Neovim and type `:PlugInstall` to install all Neovim plugins. 
+* **Wallpaper** : Add this script  in `.xprofile`. if `.xprofile` doesn't exist you can create manually.
+```sh
+nitrogen --random --set-zoom-fill &	
 ```
-Debian & Ubuntu : `sudo apt install polybar`
-</details>
+Make sure you have set the wallpaper with nitrogen.
+* **Monitor** : Open arandr and set monitor configuration, after you done with the configuration, save the configuration. 
+	- Copy all configuration in file`.xprofile`.
+* **Icons** : Open lxappearance and chose WhiteSur icon, but you can also add another icons in `~/.themes`
+	
 
-[commnet]: # (Launcher)
-<details>
-<summary><strong>Rofi</strong></summary>
 
-**Installation**\
-Arch : `sudo pacman -S rofi`\
-Debian & Ubuntu : `sudo apt install rofi`
-</details>
+### Configuration 
+For the advance configuration you can follow this. <br>
+* **Neovim**<br>
 
-[commnet]: # (Shell)
-<details>
-<summary><strong>Zsh</strong></summary>
+By default colorscheme this Neovim is `ayu_mirage`. but in this configuration im have added some colorscheme like `Gruvbox`, `Nord`, `Dracula` and `OneDark`
 
-**Installation**\
-Arch : `sudo pacman -S zsh`\
-Debian & Ubuntu : `sudo apt install zsh`
-</details>
+If you want to change colorscheme, just open config file in `~/.config/nvim/init.vim` and edit this section
+```vim
+colorscheme ayu
+```
 
-### Setup
-Clone this repository `git clone https://github.com/fikrinzf/dotfiles`\
-Copy all files to your `$HOME` directory 
+Not only Neovim colorscheme, you also can edit the lualine colorscheme by edit this section
+```vim
+theme = 'ayu_mirage'
+```
+* **Rofi** 
 
-#### Notes : 
-You should install `node.js` v.12 or higher and instal pynvim by run `pip3 --user pynvim`\
-If bracey have error, just go to `~/.config/nvim/plugged/bracey.vim` with terminal and run this command `npm install --prefix server`
+Customize file in `~/.config/rofi`.
+But, if you too lazy to customize rofi, you can install rofi theme. just follow this [repository](https://github.com/adi1090x/rofi)
 
-### Configuration
-**Bspwm** :\
-You can customize bspwm in `~/.config/bspwm/bspwmrc`
+* **Bspwm and Sxhkd** 
+	
+Bspwm configuration in `~/.config/bspwm/bspwmrc`.
 
-**Sxhkd** :\
-Configuration file at `~/.config/sxhkd/sxhkdrc`. in this file you can add or remove keybinds also remake the keybinds
+Sxhkd configuration in `~/.config/sxhkd/sxhkdrc`. you can make your own keyboard shortcut in this file.
 
-**Change Neovim Colorscheme** :\
-Default Neovim colorscheme is `ayu_mirage`, but you can use other colorscheme. I have added some themes like `Gruvbox`, `Dracula`, `Nord`, `Onedark`, `ayu`. 
+This is the keyboard shortcut in this dotfiles : 
 
-Open file `~/.config/nvim/init.vim` Just change `colorscheme ayu` to colorscheme what you want. ex `colorscheme nord`.
+Shortcut | Action
+---|---
+`super + return` | kitty Terminal
+`super + w` | Close the window
+`super + { or }` | Change workspace
+`super + d` | App launcher
+`super + x` | Powermenu
+`super + v` | Network manager
+`ctrl + alt + b` | Min browser
+`ctrl + alt + f` | Thunar file manager
+`ctrl + alt + s` | Spotify
+`ctrl + alt + p` | Pomotroid
 
-**Change theme lualine** :\
-Lualine is statusline at bottom when you open vim, you can change this theme by opening file at `~/.config/nvim/init.vim`. search this section `theme = 'ayu_mirage'` and change theme what you want. For details you can visit official repository lualine [here](https://github.com/nvim-lualine/lualine.nvim)
+This is only part of sxhkd, you can read all shortcut in `~/.config/sxhkd/sxhkdrc` file.
 
-**Theme Kitty** :\
-Configuration file at `~/.config/kitty/kitty.conf`\
-If you want to change theme just edit this section `include themes/ayu_mirage`. Also you can customize kitty in `other.conf`
+
+#### Notes 
+* If you find an error lets discuss 
+* I don't know this will work with all distro or not
+* Thanks for using my dotfiles :)
+
