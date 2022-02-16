@@ -250,7 +250,7 @@ interval = 25
 
 mount-0 = /
 
-label-mounted = " %used% Used"
+label-mounted = " %used% Used Total %total%"
 label-mounted-foreground = ${colors.green}
 
 label-unmounted = %mountpoint% not mounted
