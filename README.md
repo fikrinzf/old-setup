@@ -11,9 +11,9 @@ Here are some details about my setup :
 * **Terminal** : [Kitty](https://github.com/kovidgoyal/kitty)
 * **Shell** : [Zsh](https://www.zsh.org/)
 
-Before using this dotfiles, make sure you have installed all stuff in my **details setup**. Afters install all stuf above you also should install another dpendencies bellow.
+Before using this dotfiles, make sure you have installed all stuff in my **details setup**. Afters install all stuf above you also should install another stuff bellow.
 <details>
-<summary><strong>Dependencies</strong></summary>
+<summary><strong>Install</strong></summary>
 
 * [Vim-Plug](https://github.com/junegunn/vim-plug)
 * [Nodejs v12 or higher](https://nodejs.org/en/)
@@ -76,14 +76,14 @@ Shortcut | Action
 ---|---
 `super + return` | kitty Terminal
 `super + w` | Close the window
-`super + { or }` | Change workspace
+`super + [ or ]` | Change workspace
 `super + d` | App launcher
 `super + x` | Powermenu
 `super + v` | Network manager
 `ctrl + alt + b` | Min browser
 `ctrl + alt + f` | Thunar file manager
 `ctrl + alt + s` | Spotify
-`ctrl + alt + p` | Pomotroid
+`ctrl + alt + p` | xfce4-screenshoot
 
 This is only part of sxhkd, you can read all shortcut in `~/.config/sxhkd/sxhkdrc` file.
 
