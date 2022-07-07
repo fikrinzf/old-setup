@@ -1,44 +1,34 @@
 " ===== Plugins =====
 call plug#begin('~/.config/nvim/plugged')
 
-# Lua line
 Plug 'nvim-lualine/lualine.nvim'
-# Dev icon
 Plug 'kyazdani42/nvim-web-devicons'
-# Nerdtree
 Plug 'preservim/nerdtree'
-# Vim-polyglot
 Plug 'sheerun/vim-polyglot'
-# COC
 Plug 'neoclide/coc.nvim',{'branch':'release'}
-# Auto pairs
 Plug 'jiangmiao/auto-pairs'
-# Fuzzy finder
 Plug 'junegunn/fzf', {'do': {-> fzf#install()}}
 Plug 'junegunn/fzf.vim'
-# Bracey/Live server html
 Plug 'turbio/bracey.vim'
 Plug 'turbio/bracey.vim', {'do':'npm install --prefix server'}
-# Emmet
 Plug 'mattn/emmet-vim'
-# Lsp
 Plug 'neovim/nvim-lspconfig'
-# Snippets
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-# Icons
 Plug 'ryanoasis/vim-devicons'
-# Syntax highlight Nerdtree
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-# Markdown preview
-Plug 'iamcoo/markdown-preview.nvim'
+Plug 'iamcco/markdown-preview.vim'
 
 " Colorscheme
-Plug 'morhetz/gruvbox' " Gruvbox
+Plug 'morhetz/gruvbox' "Gruvbox
 Plug 'arcticicestudio/nord-vim' "Nord
 Plug 'dracula/vim', { 'name': 'dracula' } "Dracula
 Plug 'joshdick/onedark.vim' "Onedark
-Plug 'ayu-theme/ayu-vim' " Ayu 
+Plug 'ayu-theme/ayu-vim' "Ayu 
+Plug 'folke/tokyonight.nvim',{ 'branch': 'main' } "Tokyonight
+Plug 'rmehri01/onenord.nvim', { 'branch': 'main' } "Onenord
+Plug 'artanikin/vim-synthwave84' "Synthwave84
+Plug 'phanviet/vim-monokai-pro' "Monokai Pro
 
 call plug#end()
 
@@ -61,7 +51,7 @@ set guifont=DroidSansMono\ Nerd\ Font\ 11
  let ayucolor="mirage"
 " let ayucolor="light"
 
-colorscheme ayu
+colorscheme nord
 
 " ===== Keymaping =====
 " Vim
@@ -89,7 +79,7 @@ let g:UltiSnipsListSnippets="<c-l>"
 let g:user_emmet_leader_key='<C-Z>'
 let g:user_emmet_expandabbr_key='<Tab>'
 
-
+let g:mkdp_refresh_slow = 1
 
 
 " ===== Lua =====
